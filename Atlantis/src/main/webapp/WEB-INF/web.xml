@@ -16,7 +16,13 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j.properties</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
 	<!-- Define the Spring Dispatcher Servlet for the REST services. The 'contextConfiguration' 
 		param with an empty value means that the Spring Context won't try to load 
 		a default file called restservices-servlet.xml -->
