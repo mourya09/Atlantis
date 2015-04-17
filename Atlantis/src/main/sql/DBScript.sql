@@ -49,7 +49,7 @@ CREATE TABLE SHARE(
 	TURNOVER_LACS float default 0.0,
 	NO_OF_TRADES BIGINT default 0,
 	DELIV_QTY BIGINT default 0,
-	primary key(SHAREID)
+	primary key(SHARE_ID)
 );
 
 

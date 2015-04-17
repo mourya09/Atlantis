@@ -74,6 +74,35 @@
 	<bean id="jsonMessageConverter"
 		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
 		
-
+	<!-- <bean id="dataSourceBean" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${driver.package}" />
+	  	<property name="jdbcUrl" value="${driver.url}" />
+	  	<property name="user" value="${driver.username}" />
+	  	<property name="password" value="${driver.password}" />
+	  	Pool properties
+	  	<property name="minPoolSize" value="${minPoolSize}" />
+	  	<property name="maxPoolSize" value="${maxPoolSize}" />
+	  	<property name="maxStatements" value="0" />
+	  	<property name="idleConnectionTestPeriod" value="900" />
+	  	<property name="maxAdministrativeTaskTime" value="0" />
+	  	<property name="loginTimeout" value="300"/>
+  	</bean>
+  	
+  	<bean id="telenorTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	Declare a JPA entityManagerFactory
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >
+		<property name="persistenceXmlLocation" value="classpath:persistence.xml"></property>
+		<property name="persistenceUnitName" value="JPAPersistenceUnit" />
+		<property name="dataSource" ref="dataSourceBean"/>
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" >
+				<property name="showSql" value="false"/>
+				<property name="databasePlatform" value="org.hibernate.dialect.Oracle10gDialect"></property>
+			</bean>
+		</property>
+	</bean> -->
 
 </beans>
