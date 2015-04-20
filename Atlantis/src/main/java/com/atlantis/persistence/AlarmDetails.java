@@ -4,7 +4,8 @@
 package com.atlantis.persistence;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+
+import org.voltdb.types.TimestampType;
 
 
 
@@ -13,15 +14,7 @@ import java.sql.Timestamp;
  *
  */
 public class AlarmDetails implements Serializable {
-	/*ALARM_ID INTEGER NOT NULL,
-	USER_ID INTEGER NOT NULL,
-	SYMBOL VARCHAR(20) NOT NULL,
-	THRESHOLD_PRICE FLOAT DEFAULT 0.0 NOT NULL,
-	CURRENT_PRICE FLOAT DEFAULT 0.0 NOT NULL,
-	VALIDITY TIMESTAMP DEFAULT NOW,
-	BORKERAGE FLOAT DEFAULT 25,
-	BUY_OR_SELL VARCHAR(2) DEFAULT 'SE',*/
-	
+
 	/**
 	 * 
 	 */
@@ -30,7 +23,7 @@ public class AlarmDetails implements Serializable {
 	private String symbol;
 	private Float thresholdPrice = 0.0f;
 	private Float currentPrice=0.0f;
-	private Timestamp validity;
+	private TimestampType validity;
 	private Float borkerage=25.0f;
 	private String buyOrSell = "SE";
 	public Integer getAlarmId() {
@@ -45,7 +38,7 @@ public class AlarmDetails implements Serializable {
 	public Float getCurrentPrice() {
 		return currentPrice;
 	}
-	public Timestamp getValidity() {
+	public TimestampType getValidity() {
 		return validity;
 	}
 	public Float getBorkerage() {
@@ -66,7 +59,7 @@ public class AlarmDetails implements Serializable {
 	public void setCurrentPrice(Float currentPrice) {
 		this.currentPrice = currentPrice;
 	}
-	public void setValidity(Timestamp validity) {
+	public void setValidity(TimestampType validity) {
 		this.validity = validity;
 	}
 	public void setBorkerage(Float borkerage) {

@@ -1,7 +1,8 @@
 package com.atlantis.persistence;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+
+import org.voltdb.types.TimestampType;
 
 public class Share implements Serializable {
 
@@ -13,7 +14,7 @@ public class Share implements Serializable {
 	private String name;
 	private String symbol;
 	private String series = "EQ";
-	private Timestamp date;
+	private TimestampType date;
 	private Float previousClosePrice = 0.0f;
 	private Float openPrice = 0.0f;
 	private Float highPrice = 0.0f;
@@ -31,7 +32,7 @@ public class Share implements Serializable {
 	public String getSeries() {
 		return series;
 	}
-	public Timestamp getDate() {
+	public TimestampType getDate() {
 		return date;
 	}
 	public Float getPreviousClosePrice() {
@@ -79,7 +80,7 @@ public class Share implements Serializable {
 	public void setSeries(String series) {
 		this.series = series;
 	}
-	public void setDate(Timestamp date) {
+	public void setDate(TimestampType date) {
 		this.date = date;
 	}
 	public void setPreviousClosePrice(Float previousClosePrice) {
