@@ -18,7 +18,6 @@ public class Portfolio implements Serializable {
 
 	private Integer userId;
 	private String portFolioName;
-	private String symbol;
 	private Integer alarmId;
 
 	public Integer getUserId() {
@@ -27,10 +26,6 @@ public class Portfolio implements Serializable {
 
 	public String getPortFolioName() {
 		return portFolioName;
-	}
-
-	public String getSymbol() {
-		return symbol;
 	}
 
 	public Integer getAlarmId() {
@@ -43,10 +38,6 @@ public class Portfolio implements Serializable {
 
 	public void setPortFolioName(String portFolioName) {
 		this.portFolioName = portFolioName;
-	}
-
-	public void setSymbol(String symbol) {
-		this.symbol = symbol;
 	}
 
 	public void setAlarmId(Integer alarmId) {
